@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,10 +28,12 @@
             <a href="#">HTML Academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <a class="page-header__logo">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона" class="page-header__logo-image">
-        </a>
+        <div class="main-nav__container">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <a class="page-header__logo">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона" class="page-header__logo-image">
+          </a>
+        </div>
       </div>
     </nav>
   </header>
@@ -39,9 +44,9 @@
     <h1 class="page-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
     <p class="page-intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     <section class="advantages">
-      <div class="advantages__item">
+      <div class="advantages__item advantages__item--first">
         <h2 class="advantages__title">Настоящий городок</h2>
-        <span class="advantages__number">№1</span>
+        <span class="advantages__number">— №1 —</span>
         <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
         <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фото города" class="advantages__photo">
       </div>
@@ -59,25 +64,25 @@
           <p class="advantages__goods-description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </li>
       </ul>
-      <div class="advantages__item">
+      <div class="advantages__item advantages__item--second">
         <h2 class="advantages__title">Там есть мост дьявола</h2>
-        <span class="advantages__number">№2</span>
+        <span class="advantages__number">— №2 —</span>
         <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Фото города" class="advantages__photo">
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item advantages__item--third">
         <h2 class="advantages__title">Небольшая площадь</h2>
-        <span class="advantages__number">№3</span>
+        <span class="advantages__number">— №3 —</span>
         <p class="advantages__description">Все интересные места находятся очень близко</p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item advantages__item--fourth">
         <h2 class="advantages__title">Красивая дорога</h2>
-        <span class="advantages__number">№4</span>
+        <span class="advantages__number">— №4 —</span>
         <p class="advantages__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item  advantages__item--fifth">
         <h2 class="advantages__title">Мало туристов</h2>
-        <span class="advantages__number">№5</span>
+        <span class="advantages__number">— №5 —</span>
         <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
       </div>
     </section>
@@ -99,17 +104,17 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">Мы в
-              Вконтакте</a>
+            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы в
+              Twitter</a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" target="_blank"
               href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" target="_blank"
-              href="https://www.instagram.com/htmlacademy">Мы в
-              Инстаграме</a>
+            <a class="social__link social__link--youtube" target="_blank"
+              href="https://www.youtube.com/user/htmlacademyru">Мы в
+              Youtube</a>
           </li>
         </ul>
       </div>
