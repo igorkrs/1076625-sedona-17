@@ -9,7 +9,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 22px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 22px;
+  padding-bottom: 17px;
 }
 
 .photo__item::before {
@@ -25,15 +28,27 @@
 }
 
 .photo__title {
+  margin: 0;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
+.photo__description {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
 .photo__likes {
+  font-size: 14px;
+  line-height: 24px;
   position: relative;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-left: 37px;
+  margin-left: 31px;
 }
 
 .photo__likes::before {
@@ -41,8 +56,7 @@
   position: absolute;
   display: block;
   background: url("../img/icon-like.svg") no-repeat;
-  left: -23px;
-  top: -4px;
+  left: -31px;
   width: 23px;
   height: 21px;
   opacity: 0.3;

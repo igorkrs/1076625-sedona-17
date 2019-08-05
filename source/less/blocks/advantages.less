@@ -10,17 +10,27 @@
   padding-top: 77px;
 }
 
-.advantages__item--first .advantages__description,
-.advantages__item--second .advantages__description {
-  margin-bottom: 41px;
-  padding-left: 20px;
-  padding-right: 20px;
+// .advantages__item--first .advantages__description,
+// .advantages__item--second .advantages__description {
+//   margin-bottom: 41px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+// }
+
+.advantages {
+  display: block;
+
+  &__item--first &__description,
+  &__item--second &__description {
+    margin-bottom: 41px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .advantages__item--second {
   padding-top: 39px;
 }
-
 
 .advantages__item--first,
 .advantages__item--second {
