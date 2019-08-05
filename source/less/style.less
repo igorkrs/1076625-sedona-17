@@ -1,0 +1,103 @@
+@import "../less/normalize.less";
+@import "../less/fonts.less";
+@import "../less/blocks/main-nav.less";
+@import "../less/blocks/photo.less";
+@import "../less/blocks/advantages.less";
+@import "../less/blocks/social.less";
+@import "../less/blocks/hotels.less";
+@import "../less/blocks/site-list.less";
+@import "../less/blocks/page.less";
+@import "../less/blocks/page-footer.less";
+@import "../less/blocks/video.less";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+  line-height: 26px;
+  background-color: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  text-align: center;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.map-containter iframe {
+  border: none;
+  width: 320px;
+  height: 350px;
+}
+
+.copyright__link {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+}
+
+.page-promo {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 28px;
+}
+
+.page-promo--form .page-promo__text {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.page-promo__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}
+
+.page-promo__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 27px;
+  padding-right: 23px;
+}
