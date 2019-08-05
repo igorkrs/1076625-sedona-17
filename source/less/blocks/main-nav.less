@@ -11,29 +11,14 @@
 }
 
 .main-nav__toggle {
+  position: absolute;
   border: none;
   font-size: 0;
   background-color: transparent;
-}
-
-.main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  display: flex;
-  background: url("../img/icon-menu.svg");
   width: 23px;
   height: 22px;
   right: 20px;
-  bottom: 18px;
-}
-
-.main-nav__toggle::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  background: url("../img/icon-cross.svg");
-  width: 22px;
-  height: 22px;
-  right: 20px;
-  top: -204px;
+  bottom: 16px;
+  background: url("../img/icon-menu.svg");
+  cursor: pointer;
 }
