@@ -51,3 +51,27 @@
   text-align: center;
   padding: 28px 32px 4px;
 }
+
+@media (min-width: @tablet-width) {
+  .page__main-photo {
+    min-height: 518px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
+  }
+
+  .page__main-photo::before {
+    background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
+    height: 57px;
+  }
+
+  .page__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding: 51px 139px 0;
+  }
+
+  .page__main-item {
+    width: 460px;
+    height: 350px;
+    margin-top: 78px;
+  }
+}

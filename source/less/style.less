@@ -1,5 +1,6 @@
 @import "../less/normalize.less";
 @import "../less/fonts.less";
+@import "../less/variables.less";
 @import "../less/blocks/main-nav.less";
 @import "../less/blocks/photo.less";
 @import "../less/blocks/advantages.less";
@@ -51,6 +52,17 @@ input[type="radio"].visually-hidden {
 .main-wrapper {
   max-width: 320px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-wrapper {
+    max-width: 768px;
+  }
+
+  .page-header__logo {
+    top: 0;
+    left: calc(50% - 51px);
+  }
 }
 
 .page-header__logo {
