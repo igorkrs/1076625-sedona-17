@@ -10,6 +10,8 @@
 @import "../less/blocks/page.less";
 @import "../less/blocks/page-footer.less";
 @import "../less/blocks/video.less";
+@import "../less/blocks/page-promo.less";
+@import "../less/blocks/page-header.less";
 
 html {
   box-sizing: border-box;
@@ -49,34 +51,8 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.main-wrapper {
-  max-width: 320px;
-  margin: 0 auto;
-}
-
-@media (min-width: @tablet-width) {
-  .main-wrapper {
-    max-width: 768px;
-  }
-
-  .page-header__logo {
-    top: 0;
-    left: calc(50% - 51px);
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-wrapper {
-    max-width: 1200px;
-  }
-}
-
-.page-header__logo {
-  text-align: center;
+img {
   display: block;
-  position: absolute;
-  cursor: pointer;
-  z-index: 99;
 }
 
 .map-containter iframe {
@@ -91,31 +67,4 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   font-size: 14px;
   color: #000000;
-}
-
-.page-promo {
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 39px;
-  padding-bottom: 28px;
-}
-
-.page-promo--form .page-promo__text {
-  padding-left: 22px;
-  padding-right: 22px;
-}
-
-.page-promo__title {
-  margin: 0;
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 26px;
-}
-
-.page-promo__text {
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  padding-left: 27px;
-  padding-right: 23px;
 }
