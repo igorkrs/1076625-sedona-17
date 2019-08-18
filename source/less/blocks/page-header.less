@@ -1,0 +1,25 @@
+.page-header__logo {
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  position: absolute;
+  z-index: 99;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    top: 0;
+    left: calc(50% - 51px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    left: calc(50% - 94px);
+  }
+
+  .page-header__logo-image {
+    width: 188px;
+    height: 96px;
+  }
+}
