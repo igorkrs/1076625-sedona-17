@@ -1,0 +1,49 @@
+.evaluation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+}
+
+.evaluation__title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.evaluation__radio {
+  position: relative;
+  margin-left: 70px;
+  margin-bottom: 52px;
+  font-weight: bold;
+}
+
+.evaluation__input~.evaluation__button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  left: -70px;
+  right: 0;
+}
+
+.evaluation__input:checked~.evaluation__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #333333;
+  border-radius: 50%;
+  left: -60px;
+  right: 0;
+}
+
+.evaluation__input {
+  display: none;
+}

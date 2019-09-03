@@ -1,0 +1,60 @@
+.contacts {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  padding-bottom: 5px;
+}
+
+.contacts__title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.contacts__input {
+  padding: 22px 76px 19px 22px;
+  flex-grow: 1;
+  background-color: #f2f2f2;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+}
+
+.contacts__input-wrap {
+  position: relative;
+  display: block;
+}
+
+.contacts__input-wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 58px;
+  height: 100%;
+  background: url("../../img/icon-phone.svg") no-repeat #e6e6e6;
+  background-position: center;
+}
+
+.contacts__item:nth-child(3) .contacts__input-wrap::before {
+  background: url("../../img/icon-mail.svg") no-repeat #e6e6e6;
+  background-position: center;
+}
+
+.contacts__input::placeholder {
+  color: black;
+}
+
+.contacts__item {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contacts__label {
+  font-size: 14px;
+}

@@ -1,7 +1,6 @@
 .page {
   margin: 0 auto;
   min-width: 320px;
-  max-width: 320px;
 }
 
 .page__main-photo {
@@ -10,12 +9,12 @@
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
   position: relative;
   justify-content: center;
-  background-position: -224px 3px;
+  background-position: center;
 }
 
 .page__main-photo--short {
   min-height: 158px;
-  background-position: -170px -229px;
+  background-position: center;
 }
 
 .page__main-photo::before {
@@ -23,10 +22,11 @@
   position: absolute;
   display: block;
   background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
-  height: 26px;
-  background-size: auto 102%;
+  height: 100%;
+  background-size: 103%;
+  background-position: bottom;
 }
 
 .page__main-item {
@@ -110,26 +110,26 @@
   .page__main-photo--short {
     min-height: 301px;
     background-position: 0 -217px;
+  }
 
-    .page__main-photo::before {
-      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
-      height: 56px;
-    }
+  .page__main-photo::before {
+    background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
+    height: 56px;
+  }
 
-    .page__item--short {
-      margin-top: 101px;
-    }
+  .page__item--short {
+    margin-top: 101px;
+  }
 
-    .page__promo {
-      padding-top: 112px;
-    }
+  .page__promo {
+    padding-top: 112px;
+  }
 
-    .page__title {
-      padding: 51px 290px 0;
-    }
+  .page__title {
+    padding: 51px 290px 0;
+  }
 
-    .page__intro {
-      padding-bottom: 49px;
-    }
+  .page__intro {
+    padding-bottom: 49px;
   }
 }

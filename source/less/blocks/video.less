@@ -39,6 +39,27 @@
   position: absolute;
   bottom: 0;
   left: calc(50% - 140px);
+  justify-content: center;
+  align-items: center;
+}
+
+.video__line {
+  position: relative;
+  width: 235px;
+  height: 3px;
+  opacity: 0.2;
+  background-color: #ffffff;
+}
+
+.video__scale::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  left: 20%;
 }
 
 .video__buttons {
@@ -49,6 +70,23 @@
   background-color: #f2f2f2;
   bottom: -66px;
   left: calc(50% - 140px);
+}
+
+.video__button {
+  border: none;
+  background-color: transparent;
+}
+
+.video__button:nth-child(1) {
+  margin-left: 18px;
+}
+
+.video__button:nth-child(2) {
+  margin-left: 121px;
+}
+
+.video__button:nth-child(3) {
+  margin-left: 19px;
 }
 
 @media (min-width: @tablet-width) {
