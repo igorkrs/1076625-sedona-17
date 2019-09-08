@@ -27,6 +27,7 @@
   width: 321px;
   height: 201px;
   background: url("../img/video-mobile@1x.jpg");
+  margin: 0 auto;
   margin-bottom: 84px;
 }
 
@@ -89,6 +90,18 @@
   margin-left: 19px;
 }
 
+.video__replay {
+  fill: #5c6870;
+}
+
+.video__fullscreen {
+  fill: #5c6870;
+}
+
+.video__subtitles {
+  fill: #5c6870;
+}
+
 @media (min-width: @tablet-width) {
   .video {
     padding-top: 66px;
@@ -116,6 +129,47 @@
       width: 648px;
       height: 93px;
       left: 0;
+      justify-content: flex-start;
+    }
+
+    &__scale::before {
+      left: 205px;
+    }
+
+    &__line {
+      width: 389px;
+      margin-left: 93px;
+    }
+
+    &__buttons {
+      bottom: 13px;
+      background-color: transparent;
+      width: 100%;
+      left: 0;
+    }
+
+    &__button:nth-child(1) {
+      margin-left: 29px;
+    }
+
+    &__button:nth-child(2) {
+      margin-left: 461px;
+    }
+
+    &__button:nth-child(3) {
+      margin-left: 19px;
+    }
+
+    &__replay {
+      fill: #ffffff;
+    }
+
+    &__fullscreen {
+      fill: #ffffff;
+    }
+
+    &__subtitles {
+      fill: #ffffff;
     }
   }
 }
