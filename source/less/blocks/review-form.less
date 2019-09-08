@@ -3,3 +3,61 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.review-form__submit {
+  width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.review-form__required {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review-form__evaluation {
+    order: 1;
+    width: 50%;
+  }
+
+  .review-form__person {
+    order: 2;
+    width: 50%;
+  }
+
+  .review-form__contacts {
+    order: 3;
+    min-width: 100%;
+  }
+
+  .review-form__places {
+    order: 4;
+    min-width: 100%;
+  }
+
+  .review-form__comment {
+    order: 5;
+    min-width: 100%;
+  }
+
+  .review-form__submit {
+    order: 6;
+  }
+
+  .review-form__required {
+    display: block;
+    order: 7;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
