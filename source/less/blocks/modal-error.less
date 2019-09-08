@@ -1,12 +1,20 @@
 .modal-error {
+  display: none;
+  position: fixed;
+  top: 100px;
   width: 320px;
   height: 280px;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
-  display: flex;
   align-items: center;
   flex-direction: column;
   padding: 46px 55px 35px;
   margin: 0 auto;
+  background-color: #ffffff;
+  left: calc(50% - 160px);
+}
+
+.modal-error--opened {
+  display: flex;
 }
 
 .modal-error__title {

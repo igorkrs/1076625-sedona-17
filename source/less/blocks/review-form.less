@@ -1,6 +1,5 @@
 .review-form {
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -13,10 +12,29 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 21px;
+  display: block;
+  margin: 0 auto;
+}
+
+.review-form__title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
 .review-form__required {
   display: none;
+}
+
+.review-form__evaluation,
+.review-form__contacts,
+.review-form__person,
+.review-form__places,
+.review-form__comment {
+  padding: 5px 20px 0;
 }
 
 @media (min-width: @tablet-width) {

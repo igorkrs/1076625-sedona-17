@@ -5,17 +5,8 @@
   border-top: 1px solid #e6e6e6;
 }
 
-.person__title {
-  position: relative;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-
 .person__input {
-  padding: 22px 22px 19px 22px;
+  padding: 19px 21px 19px 22px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -39,4 +30,10 @@
 .person__label {
   margin-right: 14px;
   font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .person {
+    border-top: none;
+  }
 }

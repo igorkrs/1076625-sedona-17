@@ -1,18 +1,8 @@
 .contacts {
   margin: 0;
-  padding: 0;
   border: none;
   border-top: 1px solid #e6e6e6;
-  padding-bottom: 5px;
 }
-
-.contacts__title {
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 
 .contacts__input {
   padding: 22px 76px 19px 22px;
@@ -57,4 +47,14 @@
 
 .contacts__label {
   font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__title {
+    position: relative;
+    top: -15px;
+    width: 400px;
+    margin: 0 auto 22px;
+    background-color: #ffffff;
+  }
 }
