@@ -25,6 +25,7 @@
   display: flex;
   text-transform: uppercase;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .person__label {
@@ -32,8 +33,30 @@
   font-size: 14px;
 }
 
+.person__input:hover {
+  background-color: #e5e5e5;
+}
+
+.person__input:focus {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 4px #cccccc;
+  border: none;
+  outline: none;
+}
+
 @media (min-width: @tablet-width) {
   .person {
     border-top: none;
+  }
+
+  .person .review-form__title {
+    text-align: left;
+    margin-left: 57px;
+    margin-bottom: 57px;
+  }
+
+  .person__item {
+    margin-left: 57px;
+    margin-bottom: 20px;
   }
 }

@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <script async src="js/picturefill.min.js"></script>
 </head>
 
 <body>
@@ -76,32 +77,35 @@
       </fieldset>
       <fieldset class="review-form__contacts contacts">
         <h2 class="review-form__title">Контактная информация:</h2>
-        <label class="contacts__item">
-          <span class="contacts__label">Контактный телефон*:</span>
-          <span class="contacts__input-wrap">
-            <input class="contacts__input" type="text" name="user_phone" placeholder="Введите телефон" required>
-          </span>
-        </label>
-        <label class="contacts__item">
-          <span class="contacts__label">Электронная почта*:</span>
-          <span class="contacts__input-wrap">
-            <input class="contacts__input" type="text" name="user_mail" placeholder="Введите e-mail" required>
-          </span>
-        </label>
+        <div class="contacts__wrapper">
+          <label class="contacts__item">
+            <span class="contacts__label">Контактный телефон*:</span>
+            <span class="contacts__label">Телефон*:</span>
+            <span class="contacts__input-wrap">
+              <input class="contacts__input" type="text" name="user_phone" placeholder="Введите телефон" required>
+            </span>
+          </label>
+          <label class="contacts__item">
+            <span class="contacts__label">Электронная почта*:</span>
+            <span class="contacts__input-wrap">
+              <input class="contacts__input" type="text" name="user_mail" placeholder="Введите e-mail" required>
+            </span>
+          </label>
+        </div>
       </fieldset>
       <fieldset class="review-form__evaluation evaluation">
         <h2 class="review-form__title">Ваше общее впечатление:</h2>
-        <label class="evaluation__radio" tabindex="0">
+        <label class="evaluation__radio">
           <input class="evaluation__input" type="radio" id="radio-1" value="good" name="user_evaluation" checked>
           <span class="evaluation__button"></span>
           Скорее положительное
         </label>
-        <label class="evaluation__radio" tabindex="0">
+        <label class="evaluation__radio">
           <input class="evaluation__input" type="radio" id="radio-2" value="bad" name="user_evaluation">
           <span class="evaluation__button"></span>
           Скорее отрицательное
         </label>
-        <label class="evaluation__radio" tabindex="0">
+        <label class="evaluation__radio">
           <input class="evaluation__input" type="radio" id="radio-3" value="idk" name="user_evaluation">
           <span class="evaluation__button"></span>
           Затрудняюсь ответить
@@ -109,26 +113,28 @@
       </fieldset>
       <fieldset class="review-form__places places">
         <h2 class="review-form__title">Посещенные<br>достопримечательности:</h2>
-        <label class="places__checkbox" tabindex="0">
-          <input class="places__input" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
-          <span class="places__button"></span>
-          Мост Дьявола
-        </label>
-        <label class="places__checkbox" tabindex="0">
-          <input class="places__input" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
-          <span class="places__button"></span>
-          Гора-Колокол
-        </label>
-        <label class="places__checkbox" tabindex="0">
-          <input class="places__input" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
-          <span class="places__button"></span>
-          Слайд-парк
-        </label>
-        <label class="places__checkbox" tabindex="0">
-          <input class="places__input" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
-          <span class="places__button"></span>
-          Красные скалы
-        </label>
+        <div class="places__checkbox-wrapper">
+          <label class=" places__checkbox">
+            <input class="places__input" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
+            <span class="places__button"></span>
+            Мост Дьявола
+          </label>
+          <label class="places__checkbox">
+            <input class="places__input" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
+            <span class="places__button"></span>
+            Гора-Колокол
+          </label>
+          <label class="places__checkbox">
+            <input class="places__input" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
+            <span class="places__button"></span>
+            Слайд-парк
+          </label>
+          <label class="places__checkbox">
+            <input class="places__input" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
+            <span class="places__button"></span>
+            Красные скалы
+          </label>
+        </div>
       </fieldset>
       <fieldset class="review-form__comment comment">
         <h2 class="review-form__title">Опишите свои эмоции:</h2>
@@ -162,7 +168,7 @@
       </div>
       <div class="page-footer__copyright copyright">Разработано
         <a class="button copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="coryright_icon" width="27" height="34">
+          <svg class="copyright__icon" width="27" height="34">
             <use xlink:href="#icon_academy"></use>
           </svg>
         </a>
@@ -177,8 +183,8 @@
   <section class="modal-success">
     <div class="modal-success__wrapper">
       <h2 class="modal-success__title">Ваш отзыв отправлен!</h2>
-      <p class="modal-success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
-        В ближайшее время мы опубликуем его на сайте.</p>
+      <p class="modal-success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.</p>
+      <p class="modal-success__text"> В ближайшее время мы опубликуем его на сайте.</p>
     </div>
     <div class="modal-success__button-wrapper">
       <button class="modal-success__button popup-button" type="button">Закрыть окно</button>

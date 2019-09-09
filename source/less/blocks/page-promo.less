@@ -2,7 +2,11 @@
   text-transform: uppercase;
   text-align: center;
   padding-top: 39px;
-  padding-bottom: 28px;
+  padding-bottom: 17px;
+}
+
+.page-promo--photo {
+  padding-bottom: 29px;
 }
 
 .page-promo--form .page-promo__text {
@@ -23,6 +27,7 @@
   line-height: 24px;
   padding-left: 27px;
   padding-right: 23px;
+  color: #333333;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,5 +45,23 @@
     margin: 0 auto;
     text-align: center;
     width: 480px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-promo--photo {
+    padding-top: 73px;
+    padding-bottom: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-promo--photo {
+    padding-top: 111px;
+  }
+
+  .page-promo--form {
+    padding-top: 111px;
+    padding-bottom: 54px;
   }
 }

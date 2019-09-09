@@ -3,37 +3,54 @@
   margin: 0;
   border: none;
   border-top: 1px solid #e6e6e6;
+  padding-bottom: 0;
 }
 
 .evaluation__radio {
   position: relative;
-  margin-left: 70px;
-  margin-bottom: 52px;
+  margin-bottom: 43px;
   font-weight: bold;
+  margin-top: 36px;
+  display: block;
+  margin-left: 79px;
+  cursor: pointer;
 }
 
 .evaluation__input~.evaluation__button::before {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background-color: #f2f2f2;
   border-radius: 50%;
-  left: -70px;
-  right: 0;
+  left: -79px;
+  top: -14px;
 }
 
 .evaluation__input:checked~.evaluation__button::after {
   content: "";
   position: absolute;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   background-color: #333333;
   border-radius: 50%;
-  left: -60px;
-  right: 0;
+  left: -62px;
+  top: 3px;
+}
+
+.evaluation__radio:hover .evaluation__button::before,
+.evaluation__radio:focus .evaluation__button::before {
+  background-color: #e5e5e5;
+}
+
+.evaluation__radio:active .evaluation__button::before {
+  background-color: #d5d5d5;
+}
+
+.evaluation__radio:active .evaluation__button::after {
+  opacity: 0.3;
 }
 
 .evaluation__input {
@@ -44,5 +61,38 @@
   .evaluation {
     border-top: none;
     border-right: 1px solid #e6e6e6;
+    margin-top: 5px;
+  }
+
+  .evaluation .review-form__title {
+    margin-bottom: 73px;
+    text-align: left;
+  }
+
+  .evaluation__radio {
+    margin-bottom: 52px;
+    margin-left: 75px;
+  }
+
+  .evaluation__radio:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .evaluation__input~.evaluation__button::before {
+    left: -74px;
+  }
+
+  .evaluation__input:checked~.evaluation__button::after {
+    left: -58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .evaluation .review-form__title {
+    margin-left: 76px;
+  }
+
+  .evaluation__radio {
+    margin-left: 79px;
   }
 }

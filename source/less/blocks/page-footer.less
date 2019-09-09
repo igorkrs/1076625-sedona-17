@@ -26,10 +26,30 @@
     max-width: @tablet-width;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 48px;
+    padding-top: 36px;
   }
 
   .page-footer__social {
     margin-left: -11px;
+  }
+
+  .page-footer__copyright {
+    margin-top: -27px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    max-width: @desktop-width;
+    justify-content: flex-start;
+  }
+
+  .page-footer__title {
+    margin-left: 120px;
+    margin-right: 280px;
+  }
+
+  .page-footer__social {
+    margin-right: 279px;
   }
 }

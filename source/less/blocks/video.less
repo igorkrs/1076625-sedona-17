@@ -19,6 +19,7 @@
   padding-left: 27px;
   padding-right: 23px;
   margin-bottom: 34px;
+  color: #333333;
 }
 
 .video__content {
@@ -105,76 +106,98 @@
 @media (min-width: @tablet-width) {
   .video {
     padding-top: 66px;
+    padding-bottom: 40px;
+  }
 
-    &__title {
-      font-size: 30px;
-      margin-bottom: 31px;
-    }
+  .video__title {
+    font-size: 30px;
+    margin-bottom: 31px;
+  }
 
-    &__text {
-      padding: 0;
-      margin: 0 auto;
-      max-width: 428px;
-      margin-bottom: 74px;
-    }
+  .video__text {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 428px;
+    margin-bottom: 74px;
+  }
 
-    &__content {
-      margin: 0 auto;
-      width: 648px;
-      height: 499px;
-      background: url("../img/video-tablet@1x.jpg");
-    }
+  .video__content {
+    margin: 0 auto;
+    width: 648px;
+    height: 499px;
+    background: url("../img/video-tablet@1x.jpg");
+  }
 
-    &__scale {
-      width: 648px;
-      height: 93px;
-      left: 0;
-      justify-content: flex-start;
-    }
+  .video__scale {
+    width: 100%;
+    height: 93px;
+    left: 0;
+    justify-content: flex-start;
+  }
 
-    &__scale::before {
-      left: 205px;
-    }
+  .video__scale::before {
+    left: 205px;
+  }
 
-    &__line {
-      width: 389px;
-      margin-left: 93px;
-    }
+  .video__line {
+    width: 389px;
+    margin-left: 93px;
+  }
 
-    &__buttons {
-      bottom: 13px;
-      background-color: transparent;
-      width: 100%;
-      left: 0;
-    }
+  .video__buttons {
+    bottom: 13px;
+    background-color: transparent;
+    width: 100%;
+    left: 0;
+  }
 
-    &__button:nth-child(1) {
-      margin-left: 29px;
-    }
+  .video__button:nth-child(1) {
+    margin-left: 29px;
+  }
 
-    &__button:nth-child(2) {
-      margin-left: 461px;
-    }
+  .video__button:nth-child(2) {
+    margin-left: 461px;
+  }
 
-    &__button:nth-child(3) {
-      margin-left: 19px;
-    }
+  .video__button:nth-child(3) {
+    margin-left: 19px;
+  }
 
-    &__replay {
-      fill: #ffffff;
-    }
+  .video__replay {
+    fill: #ffffff;
+  }
 
-    &__fullscreen {
-      fill: #ffffff;
-    }
+  .video__fullscreen {
+    fill: #ffffff;
+  }
 
-    &__subtitles {
-      fill: #ffffff;
-    }
+  .video__subtitles {
+    fill: #ffffff;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .video {
+    padding-bottom: 86px;
+    padding-top: 70px;
+  }
+
+  .video__text {
+    margin-bottom: 71px;
+  }
+
+  .video__button:nth-child(2) {
+    margin-left: auto;
+  }
+
+  .video__button:last-child {
+    margin-right: 37px;
+  }
+
+  .video__line {
+    width: 540px;
+  }
+
   .video__content {
     width: 800px;
     height: 500px;

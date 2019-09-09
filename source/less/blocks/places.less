@@ -5,37 +5,117 @@
   border-top: 1px solid #e6e6e6;
 }
 
+.places .review-form__title {
+  margin-bottom: 31px;
+}
+
 .places__checkbox {
   position: relative;
-  margin-left: 70px;
-  margin-bottom: 52px;
+  margin-bottom: 54px;
   font-weight: bold;
+  margin-left: 79px;
+  cursor: pointer;
+}
+
+.places__checkbox:hover .places__button::before,
+.places__checkbox:focus .places__button::before,
+.places__checkbox:hover .places__button::after,
+.places__checkbox:focus .places__button::after {
+  background-color: #e5e5e5;
+}
+
+.places__checkbox:active .places__button::before {
+  background-color: #d5d5d5;
+}
+
+.places__checkbox:active .places__button::after {
+  opacity: 0.3;
+}
+
+.places__checkbox:nth-child(4) {
+  margin-bottom: 36px;
 }
 
 .places__input~.places__button::before {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background-color: #f2f2f2;
   border-radius: 5px;
-  left: -70px;
-  top: 0;
+  left: -80px;
+  top: -14px;
 }
 
 .places__input:checked~.places__button::after {
   content: "";
   position: absolute;
   display: block;
-  width: 24px;
-  height: 16px;
-  border-radius: 50%;
-  left: -60px;
-  top: 20px;
-  background: url("../img/icon-tick.svg") no-repeat;
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  left: -80px;
+  top: -14px;
+  background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 54% 51%;
 }
 
 .places__input {
   display: none;
+}
+
+.places__checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .places {
+    margin-bottom: 58px;
+  }
+
+  .places .review-form__title {
+    position: relative;
+    top: -75px;
+    width: 400px;
+    margin: 0 auto -60px;
+    background-color: #ffffff;
+    padding-top: 49px;
+  }
+
+  .places__checkbox-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 94px;
+    padding-top: 11px;
+  }
+
+  .places__checkbox {
+    min-width: 182px;
+    margin-bottom: 32px;
+    margin-top: 31px;
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .places__checkbox-wrapper {
+    padding-left: 0;
+  }
+
+  .places__checkbox:first-child {
+    min-width: 180px;
+  }
+
+  .places__checkbox:nth-child(2) {
+    min-width: 180px;
+  }
+
+  .places__checkbox:nth-child(3) {
+    min-width: 155px;
+  }
+
+  .places__checkbox:nth-child(4) {
+    min-width: 125px;
+  }
 }

@@ -1,6 +1,7 @@
 .review-form {
   margin: 0 auto;
   box-sizing: border-box;
+  margin-bottom: 37px;
 }
 
 .review-form__submit {
@@ -14,6 +15,7 @@
   font-size: 21px;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .review-form__title {
@@ -22,7 +24,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 19px;
 }
 
 .review-form__required {
@@ -34,13 +36,27 @@
 .review-form__person,
 .review-form__places,
 .review-form__comment {
-  padding: 5px 20px 0;
+  padding: 19px 20px 5px;
 }
 
 @media (min-width: @tablet-width) {
   .review-form {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 60px;
+    margin-bottom: 61px;
+  }
+
+  .review-form__evaluation,
+  .review-form__contacts,
+  .review-form__person,
+  .review-form__places,
+  .review-form__comment {
+    padding: 0;
+  }
+
+  .review-form__title {
+    font-size: 21px;
   }
 
   .review-form__evaluation {
@@ -51,6 +67,7 @@
   .review-form__person {
     order: 2;
     width: 50%;
+    padding-top: 5px;
   }
 
   .review-form__contacts {
@@ -70,6 +87,10 @@
 
   .review-form__submit {
     order: 6;
+    text-align: left;
+    width: 324px;
+    margin-left: 0;
+    padding-left: 65px;
   }
 
   .review-form__required {
@@ -77,5 +98,23 @@
     order: 7;
     font-size: 14px;
     text-transform: uppercase;
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form {
+    margin: 0 120px;
+    margin-bottom: 64px;
+  }
+
+  .review-form__submit {
+    width: 480px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .review-form__person {
+    padding-left: 22px;
   }
 }

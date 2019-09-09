@@ -1,8 +1,8 @@
-var error = document.querySelector(".modal-error");
-var success = document.querySelector(".modal-success");
-var btn = document.querySelector(".popup-button");
-var formbtn = document.querySelector(".review-form__submit");
-
+var
+  error = document.querySelector(".modal-error"),
+  success = document.querySelector(".modal-success"),
+  btnsArr = document.querySelectorAll(".popup-button"),
+  formbtn = document.querySelector(".review-form__submit");
 
 formbtn.addEventListener("click", function(event) {
   event.preventDefault();
@@ -15,11 +15,13 @@ formbtn.addEventListener("click", function(event) {
   }
 });
 
+btnsArr.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    if (success.classList.contains("modal-success--opened")) {
+      success.classList.remove("modal-success--opened");
+    } else if (error.classList.contains("modal-error--opened")) {
+      error.classList.remove("modal-error--opened");
+    }
+  });
 
-btn.addEventListener("click", function() {
-  if (success.classList.contains("modal-success--opened")) {
-    success.classList.remove("modal-success--opened");
-  } else if (error.classList.contains("modal-error--opened")) {
-    error.classList.remove("modal-error--opened");
-  }
 });
