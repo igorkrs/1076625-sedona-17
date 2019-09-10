@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Седона</title>
   <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <script async src="js/picturefill.min.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -82,58 +82,38 @@
             <span class="contacts__label">Контактный телефон*:</span>
             <span class="contacts__label">Телефон*:</span>
             <span class="contacts__input-wrap">
-              <input class="contacts__input" type="text" name="user_phone" placeholder="Введите телефон" required>
+              <input class="contacts__input" type="tel" name="user_phone" placeholder="Введите телефон" required>
             </span>
           </label>
           <label class="contacts__item">
             <span class="contacts__label">Электронная почта*:</span>
             <span class="contacts__input-wrap">
-              <input class="contacts__input" type="text" name="user_mail" placeholder="Введите e-mail" required>
+              <input class="contacts__input" type="email" name="user_mail" placeholder="Введите e-mail" required>
             </span>
           </label>
         </div>
       </fieldset>
       <fieldset class="review-form__evaluation evaluation">
         <h2 class="review-form__title">Ваше общее впечатление:</h2>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-1" value="good" name="user_evaluation" checked>
-          <span class="evaluation__button"></span>
-          Скорее положительное
-        </label>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-2" value="bad" name="user_evaluation">
-          <span class="evaluation__button"></span>
-          Скорее отрицательное
-        </label>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-3" value="idk" name="user_evaluation">
-          <span class="evaluation__button"></span>
-          Затрудняюсь ответить
-        </label>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-1" value="good" name="user_evaluation"
+          checked>
+        <label class="evaluation__radio" for="radio-1">Скорее положительное</label>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-2" value="bad" name="user_evaluation">
+        <label class="evaluation__radio" for="radio-2">Скорее отрицательное</label>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-3" value="idk" name="user_evaluation">
+        <label class="evaluation__radio" for="radio-3">Затрудняюсь ответить</label>
       </fieldset>
       <fieldset class="review-form__places places">
         <h2 class="review-form__title">Посещенные<br>достопримечательности:</h2>
         <div class="places__checkbox-wrapper">
-          <label class=" places__checkbox">
-            <input class="places__input" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
-            <span class="places__button"></span>
-            Мост Дьявола
-          </label>
-          <label class="places__checkbox">
-            <input class="places__input" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
-            <span class="places__button"></span>
-            Гора-Колокол
-          </label>
-          <label class="places__checkbox">
-            <input class="places__input" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
-            <span class="places__button"></span>
-            Слайд-парк
-          </label>
-          <label class="places__checkbox">
-            <input class="places__input" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
-            <span class="places__button"></span>
-            Красные скалы
-          </label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
+          <label class=" places__checkbox" for="checkbox-1">Мост Дьявола</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
+          <label class="places__checkbox" for="checkbox-2">Гора-Колокол</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
+          <label class="places__checkbox" for="checkbox-3">Слайд-парк</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
+          <label class="places__checkbox" for="checkbox-4">Красные скалы</label>
         </div>
       </fieldset>
       <fieldset class="review-form__comment comment">
@@ -151,9 +131,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы
-              в
-              Twitter</a>
+            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы в Twitter</a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" target="_blank"
@@ -161,8 +139,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" target="_blank"
-              href="https://www.youtube.com/user/htmlacademyru">Мы в
-              Youtube</a>
+              href="https://www.youtube.com/user/htmlacademyru">Мы в Youtube</a>
           </li>
         </ul>
       </div>
@@ -190,8 +167,8 @@
       <button class="modal-success__button popup-button" type="button">Закрыть окно</button>
     </div>
   </section>
+  <script src="js/script.js"></script>
+  <script src="js/popups.js"></script>
 </body>
-<script src="js/script.js"></script>
-<script src="js/popups.js"></script>
 
 </html>

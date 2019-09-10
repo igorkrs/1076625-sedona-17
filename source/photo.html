@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Седона</title>
   <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <script async src="js/picturefill.min.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -88,12 +88,16 @@
     <div class="photo">
       <ul class="photo__list">
         <li class="photo__item">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
-            <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы"
-              class="photo__image">
-          </picture>
+          <a href="img/photo-sunset-desktop@2x.jpg">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                alt="Неродные просторы" class="photo__image">
+            </picture>
+          </a>
           <div class="photo__description">
             <h3 class="photo__title">Неродные просторы</h3>
             <span class="photo__author">Автор фото: Борис</span>
@@ -105,11 +109,16 @@
           </div>
         </li>
         <li class="photo__item">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
-            <img src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" class="photo__image">
-          </picture>
+          <a href="img/photo-cactus-desktop@2x.jpg">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
+                alt="Местная растительность" class="photo__image">
+            </picture>
+          </a>
           <div class="photo__description">
             <h3 class="photo__title">Местная растительность</h3>
             <span class="photo__author">Автор фото: Сергей</span>
@@ -121,11 +130,16 @@
           </div>
         </li>
         <li class="photo__item">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
-            <img src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" class="photo__image">
-          </picture>
+          <a href="img/photo-roads-desktop@2x.jpg">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-roads-tablet@1x.jpg 1x,img/photo-roads-tablet@2x.jpg 2x">
+              <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север"
+                class="photo__image">
+            </picture>
+          </a>
           <div class="photo__description">
             <h3 class="photo__title">Дорога на север</h3>
             <span class="photo__author">Автор фото: Петр</span>
@@ -137,11 +151,16 @@
           </div>
         </li>
         <li class="photo__item">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
-            <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" class="photo__image">
-          </picture>
+          <a href="img/photo-bridge-desktop@2x.jpg">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола"
+                class="photo__image">
+            </picture>
+          </a>
           <div class="photo__description">
             <h3 class="photo__title">Мост дьявола</h3>
             <span class="photo__author">Автор фото: Антон</span>
@@ -191,8 +210,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы
-              в
+            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы в
               Twitter</a>
           </li>
           <li class="social__item">
@@ -201,8 +219,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" target="_blank"
-              href="https://www.youtube.com/user/htmlacademyru">Мы в
-              Youtube</a>
+              href="https://www.youtube.com/user/htmlacademyru">Мы в Youtube</a>
           </li>
         </ul>
       </div>
@@ -215,7 +232,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
-<script src="js/script.js"></script>
 
 </html>

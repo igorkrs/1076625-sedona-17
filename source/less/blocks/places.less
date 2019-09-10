@@ -17,26 +17,34 @@
   cursor: pointer;
 }
 
-.places__checkbox:hover .places__button::before,
-.places__checkbox:focus .places__button::before,
-.places__checkbox:hover .places__button::after,
-.places__checkbox:focus .places__button::after {
+.places__checkbox:hover::before,
+.places__checkbox:focus::before,
+.places__checkbox:hover::after,
+.places__checkbox:focus::after {
   background-color: #e5e5e5;
 }
 
-.places__checkbox:active .places__button::before {
+.places input[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+.places input:focus + .places__checkbox::before {
+  outline: 2px solid #9fc1f8;
+}
+
+.places__checkbox:active::before {
   background-color: #d5d5d5;
 }
 
-.places__checkbox:active .places__button::after {
+.places__checkbox:active::after {
   opacity: 0.3;
 }
 
-.places__checkbox:nth-child(4) {
+.places__checkbox:last-child {
   margin-bottom: 36px;
 }
 
-.places__input~.places__button::before {
+.places__checkbox::before {
   content: "";
   position: absolute;
   display: block;
@@ -48,20 +56,16 @@
   top: -14px;
 }
 
-.places__input:checked~.places__button::after {
+.places__checkbox::after {
   content: "";
   position: absolute;
-  display: block;
+  display: none;
   width: 55px;
   height: 55px;
   border-radius: 5px;
   left: -80px;
   top: -14px;
   background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 54% 51%;
-}
-
-.places__input {
-  display: none;
 }
 
 .places__checkbox-wrapper {
@@ -107,15 +111,15 @@
     min-width: 180px;
   }
 
-  .places__checkbox:nth-child(2) {
-    min-width: 180px;
+  .places__checkbox:nth-child(4) {
+    min-width: 177px;
   }
 
-  .places__checkbox:nth-child(3) {
+  .places__checkbox:nth-child(6) {
     min-width: 155px;
   }
 
-  .places__checkbox:nth-child(4) {
+  .places__checkbox:last-child {
     min-width: 125px;
   }
 }
