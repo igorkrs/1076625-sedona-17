@@ -1,0 +1,53 @@
+.comment {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  padding-bottom: 44px;
+}
+
+.comment__input {
+  resize: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  height: 160px;
+  border: none;
+  padding: 16px 28px 22px 20px;
+  margin-top: -3px;
+}
+
+.comment__input:hover {
+  background-color: #e5e5e5;
+}
+
+.comment__input:focus {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 4px #cccccc;
+  border: none;
+  outline: none;
+}
+
+.comment__input::placeholder {
+  color: black;
+}
+
+@media (min-width: @tablet-width) {
+  .comment .review-form__title {
+    position: relative;
+    top: -62px;
+    width: 400px;
+    margin: 0 auto -60px;
+    background-color: #ffffff;
+    padding-top: 49px;
+  }
+
+  .comment__input {
+    margin-top: 55px;
+  }
+
+  .comment {
+    padding-bottom: 51px;
+  }
+}

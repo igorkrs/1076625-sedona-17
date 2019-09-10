@@ -5,15 +5,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <svg style="display: none">
+    <symbol id="icon_academy" viewBox="0 0 26.943 34.09">
+      <path
+        d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
+    </symbol>
+  </svg>
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a href="index.html">Главная</a>
@@ -29,10 +39,9 @@
           </li>
         </ul>
         <div class="main-nav__container">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <a class="page-header__logo">
+          <a class="page-header__logo" href="index.html">
             <picture>
-              <source media="(min-width: 1200px" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"
                 class="page-header__logo-image">
             </picture>
@@ -52,66 +61,68 @@
     </div>
     <form class="review-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="review-form__person person">
-        <h2 class="person__title">Представьтесь:</h2>
-        <label class="person__item">Имя*:
+        <h2 class="review-form__title">Представьтесь:</h2>
+        <label class="person__item">
+          <span class="person__label">Имя*:</span>
           <input class="person__input" type="text" name="user_name" placeholder="Петр" required>
         </label>
-        <label class="person__item">Фамилия*:
-          <input class="person__input" type="text" name="user_surname" placeholder="Иванов" required>
+        <label class="person__item">
+          <span class="person__label">Фамилия*:</span>
+          <input class=" person__input" type="text" name="user_surname" placeholder="Иванов" required>
         </label>
-        <label class="person__item">Отчество:
-          <input class="person__input" type="text" name="user_patronymic" placeholder="Александрович">
+        <label class="person__item">
+          <span class="person__label">Отчество:</span>
+          <input class=" person__input" type="text" name="user_patronymic" placeholder="Александрович">
         </label>
       </fieldset>
       <fieldset class="review-form__contacts contacts">
-        <h2 class="contacts__title">Контактная информация:</h2>
-        <label class="contacts__item">Контактный телефон*:
-          <input class="person__input" type="text" name="user_phone" placeholder="Введите телефон" required>
-        </label>
-        <label class="contacts__item">Электронная почта*:
-          <input class="person__input" type="text" name="user_mail" placeholder="Введите e-mail" required>
-        </label>
+        <h2 class="review-form__title">Контактная информация:</h2>
+        <div class="contacts__wrapper">
+          <label class="contacts__item">
+            <span class="contacts__label">Контактный телефон*:</span>
+            <span class="contacts__label">Телефон*:</span>
+            <span class="contacts__input-wrap">
+              <input class="contacts__input" type="tel" name="user_phone" placeholder="Введите телефон" required>
+            </span>
+          </label>
+          <label class="contacts__item">
+            <span class="contacts__label">Электронная почта*:</span>
+            <span class="contacts__input-wrap">
+              <input class="contacts__input" type="email" name="user_mail" placeholder="Введите e-mail" required>
+            </span>
+          </label>
+        </div>
       </fieldset>
       <fieldset class="review-form__evaluation evaluation">
-        <h2 class="evaluation__title">Ваше общее впечатление:</h2>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-1" value="good" name="user_evaluation" checked>
-          Скорее положительное
-        </label>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-2" value="bad" name="user_evaluation">
-          Скорее отрицательное</span>
-        </label>
-        <label class="evaluation__radio">
-          <input class="evaluation__input" type="radio" id="radio-3" value="idk" name="user_evaluation">
-          Затрудняюсь ответить
-        </label>
+        <h2 class="review-form__title">Ваше общее впечатление:</h2>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-1" value="good" name="user_evaluation"
+          checked>
+        <label class="evaluation__radio" for="radio-1">Скорее положительное</label>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-2" value="bad" name="user_evaluation">
+        <label class="evaluation__radio" for="radio-2">Скорее отрицательное</label>
+        <input class="visually-hidden" tabindex="0" type="radio" id="radio-3" value="idk" name="user_evaluation">
+        <label class="evaluation__radio" for="radio-3">Затрудняюсь ответить</label>
       </fieldset>
       <fieldset class="review-form__places places">
-        <h2 class="places__title">Посещенные<br>достопримечательности:</h2>
-        <label class="places__item">
-          <input class="places__checkbox" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
-          Мост Дьявола
-        </label>
-        <label class="places__item">
-          <input class="places__checkbox" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
-          Гора-Колокол
-        </label>
-        <label class="places__item">
-          <input class="places__checkbox" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
-          Слайд-парк
-        </label>
-        <label class="places__item">
-          <input class="places__checkbox" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
-          Красные скалы
-        </label>
+        <h2 class="review-form__title">Посещенные<br>достопримечательности:</h2>
+        <div class="places__checkbox-wrapper">
+          <input class="visually-hidden" type="checkbox" id="checkbox-1" value="bridge" name="user_places" checked>
+          <label class=" places__checkbox" for="checkbox-1">Мост Дьявола</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-2" value="mountain" name="user_places" checked>
+          <label class="places__checkbox" for="checkbox-2">Гора-Колокол</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-3" value="park" name="user_places" checked>
+          <label class="places__checkbox" for="checkbox-3">Слайд-парк</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-4" value="red rocks" name="user_places">
+          <label class="places__checkbox" for="checkbox-4">Красные скалы</label>
+        </div>
       </fieldset>
       <fieldset class="review-form__comment comment">
-        <h2 class="comment__title">Опишите свои эмоции:</h2>
+        <h2 class="review-form__title">Опишите свои эмоции:</h2>
         <textarea class="comment__input" name="user_review" placeholder="Опишите подробно все свои восторги"
           required></textarea>
       </fieldset>
-      <button class="form-submit" type="submit">отправить</button>
+      <button class="review-form__submit" type="submit">отправить отзыв</button>
+      <span class="review-form__required">* — обязательные поля</span>
     </form>
   </main>
   <footer class="page-footer">
@@ -120,9 +131,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы
-              в
-              Twitter</a>
+            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы в Twitter</a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" target="_blank"
@@ -130,17 +139,36 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" target="_blank"
-              href="https://www.youtube.com/user/htmlacademyru">Мы в
-              Youtube</a>
+              href="https://www.youtube.com/user/htmlacademyru">Мы в Youtube</a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">Разработано
-        <a class="button copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive"><img
-            src="img/logo-htmlacademy.svg" alt="htmlacademy"></a>
+        <a class="button copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="copyright__icon" width="27" height="34">
+            <use xlink:href="#icon_academy"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
+  <section class="modal-error">
+    <h2 class="modal-error__title">Что-то пошло не так!</h2>
+    <p class="modal-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="modal-error__button popup-button" type="button">Ок</button>
+  </section>
+  <section class="modal-success">
+    <div class="modal-success__wrapper">
+      <h2 class="modal-success__title">Ваш отзыв отправлен!</h2>
+      <p class="modal-success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.</p>
+      <p class="modal-success__text"> В ближайшее время мы опубликуем его на сайте.</p>
+    </div>
+    <div class="modal-success__button-wrapper">
+      <button class="modal-success__button popup-button" type="button">Закрыть окно</button>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+  <script src="js/popups.js"></script>
 </body>
 
 </html>

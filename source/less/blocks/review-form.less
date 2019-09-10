@@ -1,0 +1,130 @@
+.review-form {
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 37px;
+}
+
+.review-form__submit {
+  width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.review-form__submit:hover,
+.review-form__submit:focus {
+  background-color: #669ec0;
+}
+
+.review-form__submit:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.review-form__title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.review-form__required {
+  display: none;
+}
+
+.review-form__evaluation,
+.review-form__contacts,
+.review-form__person,
+.review-form__places,
+.review-form__comment {
+  padding: 19px 20px 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 60px;
+    margin-bottom: 61px;
+  }
+
+  .review-form__evaluation,
+  .review-form__contacts,
+  .review-form__person,
+  .review-form__places,
+  .review-form__comment {
+    padding: 0;
+  }
+
+  .review-form__title {
+    font-size: 21px;
+  }
+
+  .review-form__evaluation {
+    order: 1;
+    width: 50%;
+  }
+
+  .review-form__person {
+    order: 2;
+    width: 50%;
+    padding-top: 5px;
+  }
+
+  .review-form__contacts {
+    order: 3;
+    min-width: 100%;
+  }
+
+  .review-form__places {
+    order: 4;
+    min-width: 100%;
+  }
+
+  .review-form__comment {
+    order: 5;
+    min-width: 100%;
+  }
+
+  .review-form__submit {
+    order: 6;
+    text-align: left;
+    width: 324px;
+    margin-left: 0;
+    padding-left: 65px;
+  }
+
+  .review-form__required {
+    display: block;
+    order: 7;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form {
+    margin: 0 120px;
+    margin-bottom: 64px;
+  }
+
+  .review-form__submit {
+    width: 480px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .review-form__person {
+    padding-left: 22px;
+  }
+}

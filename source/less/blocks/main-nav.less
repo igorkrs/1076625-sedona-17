@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 320px;
+  width: 100%;
   height: 56px;
 }
 
@@ -16,12 +16,43 @@
   position: absolute;
   border: none;
   font-size: 0;
-  width: 23px;
+  width: 22px;
   height: 22px;
   right: 20px;
-  bottom: 16px;
-  background: url("../img/icon-menu.svg");
+  top: 20px;
+  z-index: 2;
+  background: url("../img/icon-menu.svg") no-repeat;
   cursor: pointer;
+}
+
+.main-nav__toggle--closed {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon-cross.svg") no-repeat;
+}
+
+.main-nav--closed .site-list {
+  display: none;
+}
+
+.main-nav--opened .site-list {
+  display: flex;
+}
+
+.main-nav--nojs .site-list {
+  display: flex;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__toggle--nojs {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,6 +68,10 @@
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav--closed .site-list {
+    display: flex;
   }
 }
 

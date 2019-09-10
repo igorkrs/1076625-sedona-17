@@ -1,0 +1,98 @@
+.evaluation {
+  display: flex;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  padding-bottom: 0;
+}
+
+.evaluation__radio {
+  position: relative;
+  margin-bottom: 43px;
+  font-weight: bold;
+  margin-top: 36px;
+  display: block;
+  margin-left: 79px;
+  cursor: pointer;
+}
+
+.evaluation__radio::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  left: -78px;
+  top: -14px;
+}
+
+.evaluation__radio::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 21px;
+  height: 21px;
+  background-color: #333333;
+  border-radius: 50%;
+  left: -61px;
+  top: 3px;
+}
+
+.evaluation input[type="radio"]:checked + label::after {
+  display: block;
+}
+
+.evaluation input:focus + .evaluation__radio::before {
+  outline: 2px solid #9fc1f8;
+}
+
+.evaluation__radio:hover::before,
+.evaluation__radio:focus::before {
+  background-color: #e5e5e5;
+}
+
+.evaluation__radio:active::before {
+  background-color: #d5d5d5;
+}
+
+.evaluation__radio:active::after {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .evaluation {
+    border-top: none;
+    border-right: 1px solid #e6e6e6;
+    margin-top: 5px;
+  }
+
+  .evaluation .review-form__title {
+    margin-bottom: 73px;
+    text-align: left;
+  }
+
+  .evaluation__radio {
+    margin-bottom: 52px;
+    margin-left: 75px;
+  }
+
+  .evaluation__radio:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .evaluation__radio:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .evaluation .review-form__title {
+    margin-left: 76px;
+  }
+
+  .evaluation__radio {
+    margin-left: 79px;
+  }
+}
