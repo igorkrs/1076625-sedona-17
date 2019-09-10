@@ -187,10 +187,13 @@
   .advantages__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 45px;
+    padding: 45px 45px 0;
     width: 33.33%;
+    align-items: center;
+  }
+
+  .advantages__container .advantages__number {
+    margin-bottom: 22px;
   }
 
   .advantages__item--first .advantages__description,
@@ -201,6 +204,7 @@
 
   .advantages__goods-list {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin-bottom: 32px;
   }
@@ -209,6 +213,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    max-width: 166px;
   }
 
   .advantages__goods-item:nth-child(1) {
@@ -257,6 +262,7 @@
     padding-bottom: 44px;
     background-color: #efefef;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .advantages__goods-item:nth-child(1) .advantages__goods-title::before {
@@ -286,24 +292,42 @@
     margin-bottom: 21px;
   }
 
+  .advantages__item--third {
+    max-width: 160px;
+    margin-left: 49px;
+    margin-right: 110px;
+  }
+
+  .advantages__item--fourth {
+    max-width: 130px;
+    margin-right: 115px;
+  }
+
+  .advantages__item--fifth {
+    max-width: 150px;
+  }
+
   .advantages__item--third::before,
   .advantages__item--fourth::before {
     display: none;
   }
-
-  .advantages__wrapper .advantages__item {
-    padding: 0 51px;
-  }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__container {
+    padding: 52px 60px 0;
+  }
+
   .advantages__item--first .advantages__photo {
     margin-top: -71px;
   }
 
   .advantages__item--first .advantages__title {
     max-width: 120px;
-    margin-top: -13px;
+  }
+
+  .advantages__goods-item {
+    max-width: 289px;
   }
 
   .advantages__goods-item:nth-child(1) {
@@ -350,6 +374,10 @@
   .advantages__item--third .advantages__title,
   .advantages__item--fourth .advantages__title {
     max-width: 126px;
+  }
+
+  .advantages__item--second .advantages__description {
+    max-width: 220px;
   }
 
   .advantages__wrapper .advantages__item {
