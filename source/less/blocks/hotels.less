@@ -25,6 +25,10 @@
   color: #333333;
 }
 
+.hotels__text br {
+  display: none;
+}
+
 .hotels__button {
   display: flex;
   justify-content: center;
@@ -70,9 +74,13 @@
   .hotels__text {
     margin-bottom: 40px;
   }
+
+  .hotels__text br {
+    display: inline;
+  }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .hotels {
     padding-bottom: 66px;
   }

@@ -11,6 +11,7 @@
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
+  <script async src="js/picturefill.min.js"></script>
 </head>
 
 <body>
@@ -46,192 +47,195 @@
       </g>
     </symbol>
   </svg>
-  <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <div class="main-nav__wrapper">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a>Фото и Видео</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-        <div class="main-nav__container">
-          <a class="page-header__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"
-                class="page-header__logo-image">
-            </picture>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="page">
-    <div class="page__main-photo page__main-photo--short">
-      <img src="img/text-sedona.svg" width="229" height="39" alt="Sedona" class="page__item page__item--short">
-    </div>
-    <div class="page-promo page-promo--photo">
-      <h2 class="page-promo__title">Фото и видео</h2>
-      <p class="page-promo__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
-        политике и экономике.</p>
-    </div>
-    <div class="photo">
-      <ul class="photo__list">
-        <li class="photo__item">
-          <a href="img/photo-sunset-desktop@2x.jpg">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-              <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
-                alt="Неродные просторы" class="photo__image">
-            </picture>
-          </a>
-          <div class="photo__description">
-            <h3 class="photo__title">Неродные просторы</h3>
-            <span class="photo__author">Автор фото: Борис</span>
-            <button class="photo__likes">
-              <svg width="22px" height="20px">
-                <use xlink:href="#icon_likes"></use>
-              </svg>1350
-            </button>
-          </div>
-        </li>
-        <li class="photo__item">
-          <a href="img/photo-cactus-desktop@2x.jpg">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-              <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
-                alt="Местная растительность" class="photo__image">
-            </picture>
-          </a>
-          <div class="photo__description">
-            <h3 class="photo__title">Местная растительность</h3>
-            <span class="photo__author">Автор фото: Сергей</span>
-            <button class="photo__likes">
-              <svg width="22px" height="20px">
-                <use xlink:href="#icon_likes"></use>
-              </svg>143
-            </button>
-          </div>
-        </li>
-        <li class="photo__item">
-          <a href="img/photo-roads-desktop@2x.jpg">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-roads-tablet@1x.jpg 1x,img/photo-roads-tablet@2x.jpg 2x">
-              <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север"
-                class="photo__image">
-            </picture>
-          </a>
-          <div class="photo__description">
-            <h3 class="photo__title">Дорога на север</h3>
-            <span class="photo__author">Автор фото: Петр</span>
-            <button class="photo__likes">
-              <svg width="22px" height="20px">
-                <use xlink:href="#icon_likes"></use>
-              </svg>96
-            </button>
-          </div>
-        </li>
-        <li class="photo__item">
-          <a href="img/photo-bridge-desktop@2x.jpg">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-              <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола"
-                class="photo__image">
-            </picture>
-          </a>
-          <div class="photo__description">
-            <h3 class="photo__title">Мост дьявола</h3>
-            <span class="photo__author">Автор фото: Антон</span>
-            <button class="photo__likes">
-              <svg width="22px" height="20px">
-                <use xlink:href="#icon_likes"></use>
-              </svg>254
-            </button>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="video">
-      <h2 class="video__title">Все еще сомневаетесь?</h2>
-      <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
-        очередной
-        раз!</p>
-      <div class="video__content">
-        <div class="video__controls">
-          <div class="video__scale">
-            <div class="video__line"></div>
-          </div>
-          <div class="video__buttons">
-            <button class="video__button" type="button">
-              <svg class="video__replay" width="16px" height="20px">
-                <use xlink:href="#icon_replay"></use>
-              </svg>
-            </button>
-            <button class="video__button" type="button">
-              <svg class="video__subtitles" width="32px" height="20px">
-                <use xlink:href="#icon_subtitles"></use>
-              </svg>
-            </button>
-            <button class="video__button" type="button">
-              <svg class="video__fullscreen" width="20px" height="20px">
-                <use xlink:href="#icon_fullscreen"></use>
-              </svg>
-            </button>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a>Фото и Видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+          <div class="main-nav__container">
+            <a class="page-header__logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"
+                  class="page-header__logo-image">
+              </picture>
+            </a>
           </div>
         </div>
+      </nav>
+    </header>
+    <main class="page">
+      <div class="page__main-photo page__main-photo--short">
+        <img src="img/text-sedona.svg" width="229" height="39" alt="Sedona" class="page__item page__item--short">
       </div>
-    </div>
-  </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <b class="page-footer__title">#VISITSEDONA</b>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы в
-              Twitter</a>
+      <div class="page-promo page-promo--photo">
+        <h2 class="page-promo__title">Фото и видео</h2>
+        <p class="page-promo__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+          политике и экономике.</p>
+      </div>
+      <div class="photo">
+        <ul class="photo__list">
+          <li class="photo__item">
+            <a href="img/photo-sunset-desktop@2x.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                  alt="Неродные просторы" class="photo__image">
+              </picture>
+            </a>
+            <div class="photo__description">
+              <h3 class="photo__title">Неродные просторы</h3>
+              <span class="photo__author">Автор фото: Борис</span>
+              <button class="photo__likes" type="button">
+                <svg width="22" height="20">
+                  <use xlink:href="#icon_likes"></use>
+                </svg>1350
+              </button>
+            </div>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" target="_blank"
-              href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <li class="photo__item">
+            <a href="img/photo-cactus-desktop@2x.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
+                  alt="Местная растительность" class="photo__image">
+              </picture>
+            </a>
+            <div class="photo__description">
+              <h3 class="photo__title">Местная растительность</h3>
+              <span class="photo__author">Автор фото: Сергей</span>
+              <button class="photo__likes" type="button">
+                <svg width="22" height="20">
+                  <use xlink:href="#icon_likes"></use>
+                </svg>143
+              </button>
+            </div>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" target="_blank"
-              href="https://www.youtube.com/user/htmlacademyru">Мы в Youtube</a>
+          <li class="photo__item">
+            <a href="img/photo-roads-desktop@2x.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-roads-tablet@1x.jpg 1x,img/photo-roads-tablet@2x.jpg 2x">
+                <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север"
+                  class="photo__image">
+              </picture>
+            </a>
+            <div class="photo__description">
+              <h3 class="photo__title">Дорога на север</h3>
+              <span class="photo__author">Автор фото: Петр</span>
+              <button class="photo__likes" type="button">
+                <svg width="22" height="20">
+                  <use xlink:href="#icon_likes"></use>
+                </svg>96
+              </button>
+            </div>
+          </li>
+          <li class="photo__item">
+            <a href="img/photo-bridge-desktop@2x.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола"
+                  class="photo__image">
+              </picture>
+            </a>
+            <div class="photo__description">
+              <h3 class="photo__title">Мост дьявола</h3>
+              <span class="photo__author">Автор фото: Антон</span>
+              <button class="photo__likes" type="button">
+                <svg width="22" height="20">
+                  <use xlink:href="#icon_likes"></use>
+                </svg>254
+              </button>
+            </div>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">Разработано
-        <a class="button copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__icon" width="27" height="34">
-            <use xlink:href="#icon_academy"></use>
-          </svg>
-        </a>
+      <div class="video">
+        <h2 class="video__title">Все еще сомневаетесь?</h2>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной
+          раз!</p>
+        <div class="video__content">
+          <div class="video__controls">
+            <div class="video__scale">
+              <div class="video__line"></div>
+            </div>
+            <div class="video__buttons">
+              <button class="video__button" type="button">
+                <svg class="video__replay" width="16" height="20">
+                  <use xlink:href="#icon_replay"></use>
+                </svg>
+              </button>
+              <button class="video__button" type="button">
+                <svg class="video__subtitles" width="32" height="20">
+                  <use xlink:href="#icon_subtitles"></use>
+                </svg>
+              </button>
+              <button class="video__button" type="button">
+                <svg class="video__fullscreen" width="20" height="20">
+                  <use xlink:href="#icon_fullscreen"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <b class="page-footer__title">#VISITSEDONA</b>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" target="_blank" href="https://twitter.com/htmlacademy_ru">Мы
+                в
+                Twitter</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" target="_blank"
+                href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" target="_blank"
+                href="https://www.youtube.com/user/htmlacademyru">Мы в Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">Разработано
+          <a class="button copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__icon" width="27" height="34">
+              <use xlink:href="#icon_academy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

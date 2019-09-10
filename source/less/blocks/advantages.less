@@ -12,13 +12,13 @@
 
 .advantages {
   display: block;
+}
 
-  &__item--first &__description,
-  &__item--second &__description {
-    margin-bottom: 41px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.advantages__item--first .advantages__description,
+.advantages__item--second .advantages__description {
+  margin-bottom: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .advantages__item--second {
@@ -157,7 +157,15 @@
   color: #333333;
 }
 
+.advantages__goods-description br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .advantages__goods-description br {
+    display: inline;
+  }
+
   .advantages__item--first::before {
     display: none;
   }
